@@ -1,0 +1,11 @@
+.img-responsive {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.med-hidden {
+  @include respond-to('medium') {
+    display: none;
+  }
+}

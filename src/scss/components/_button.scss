@@ -1,0 +1,22 @@
+%button {
+  padding: 0.4rem 0.5rem 0.2rem 0.3rem;
+  background-color: transparent;
+  display: inline-block;
+  appearance: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  font-weight: 800;
+  font-family: $base-font-face;
+}
+.btn {
+  @extend %button;
+}
+.btn--primary {
+  @extend %button;
+  color: $color-secondary;
+  border-color: $color-secondary
+}

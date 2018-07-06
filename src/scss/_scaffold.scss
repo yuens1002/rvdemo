@@ -1,0 +1,20 @@
+a {
+  font-weight: 600;
+  font-size: 15px;
+  color: $link-color;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+.a--small {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.a--dark {
+  color: hsl(0, 0%, 100%);
+}

@@ -1,0 +1,8 @@
+.container {
+  @include container-fixed;
+
+  @include respond-to('large') {
+    //mx.w prevents hoz. scrollbar @bkpt
+    max-width: $lg;
+  }
+}

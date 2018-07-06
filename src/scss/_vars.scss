@@ -1,0 +1,53 @@
+//colors
+$color-primary: hsl(215, 89%, 28%) !default;
+$color-secondary: hsl(216, 74%, 50%) !default;
+$color-tertiary: hsl(180, 70%, 77%) !default;
+
+//typography
+$base-font-size: 16px !default;
+$base-font-face: 'Open Sans' !default;
+
+//link
+$link-color: $color-primary;
+$link-hover-color: lighten($color-primary, 15%);
+$link-hover-decoration: none;
+
+//breakpoints
+$min-width: 470px;
+$xs: 480px;
+$sm: 768px;
+$med: 992px;
+$lg: 1270px;
+
+$breakpoints: (
+  'x-small': (min-width: $xs),
+  'small': (min-width: $sm),
+  'medium': (min-width: $med),
+  'large': (min-width: $lg),
+);
+
+//gutter
+$grid-gutter-width: 32px;
+
+//header
+//dimensions from PSD cmp
+$top-bar-height: 47px;
+$navbar-md-height: 100px;
+$navbar-height: 42px;
+$navbar-menu-width: 64px;
+// avoid menu covering find pro btn
+// ~ $navbar-menu-width - $grid-gutter-width
+// cant use sass var inside calc
+$navbar-width: calc(100% - 55px);
+
+//brand
+$logo-width: 157px;
+$logo-md-width: 231px;
+
+//hero
+//dimensions from PSD cmp
+$hero-height: 107px;
+$hero-md-height: 133px;
+$hero-plus-navbar-height:  $hero-height + $navbar-height;
+$hero-plus-navbar-md-height:
+  $hero-md-height + $navbar-md-height + $top-bar-height;

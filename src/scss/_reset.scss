@@ -1,0 +1,22 @@
+%zero {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+html,
+body,
+header,
+section,
+footer {
+  @extend %zero;
+  width: 100%;
+}
+ul,
+ol {
+  @extend %zero;
+}
+.ss-icon {
+  vertical-align: middle;
+  font-size: 150%;
+  padding: 0 0.2rem 0 0;
+}
