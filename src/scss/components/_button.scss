@@ -18,17 +18,24 @@
 .btn--primary {
   @extend %button;
   color: $color-secondary;
-  border-color: $color-secondary
+  border-color: $color-secondary;
+  &:hover {
+    border-color: $color-tertiary;
+  }
 }
 .btn--close {
-  line-height: 0;
   @extend %button;
   padding: 0;
   float: right;
   color: $color-base;
-  border: transparent;
   font-size: 14px;
-  & :hover {
-    color: $color-secondary
+  border: transparent;
+  &:hover {
+    color: $color-secondary;
   }
+}
+.btn--send {
+  margin-top: 20px;
+  padding-left: .5rem;
+  float: right;
 }

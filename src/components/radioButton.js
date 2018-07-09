@@ -1,4 +1,4 @@
-import { Base } from '../helper.js'
+import { Base } from './base.js'
 import { $commit } from '../store.js'
 
 class Radio extends Base {
@@ -9,6 +9,9 @@ class Radio extends Base {
     this.value = props.value
     this.template = `<span class="form-control__label">${props.title}</span>`
     this.element.innerHTML = this.innerHTML
+  }
+  get radioElm () {
+    return
   }
   get innerHTML () {
     let innerHTML = this.template
@@ -27,6 +30,7 @@ class Radio extends Base {
     })
     return innerHTML
   }
+
 }
 
 export default Radio

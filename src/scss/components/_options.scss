@@ -1,0 +1,38 @@
+.options {
+  width: 100%;
+  background-color: $color-light-gray;
+  @include respond-to('medium') {
+    background-color: transparent;
+  }
+}
+.options__container {
+}
+.options__header {
+  padding: .5rem 0;
+}
+.options-results {
+  color: $color-secondary;
+  font-size: 16px;
+}
+.options-filter {
+
+}
+.options__body {
+  background-color: $color-base;
+  border: 1px solid $color-lighter-gray;
+  padding: 1rem;
+  margin-bottom: 25px;
+  @include respond-to('medium') {
+    border: none;
+    background-color: $color-light-gray;
+    border-radius: .5rem;
+    justify-content: space-between;
+  }
+}
+.options__list {
+  display: block;
+  @include respond-to('medium') {
+    display: flex;
+    justify-content: space-between;
+  }
+}

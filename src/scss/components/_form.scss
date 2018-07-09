@@ -10,11 +10,6 @@
   margin: 6px 0 18px 0;
   background-color: transparent;
   font-size: 15px;
-  //not sure why textarea isn't multi-line
-  & textarea {
-
-    width: 80%;
-  }
 }
 
 .form-control__label {

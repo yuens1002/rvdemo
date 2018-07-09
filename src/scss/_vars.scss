@@ -4,8 +4,10 @@ $color-secondary: hsl(216, 74%, 50%) !default;
 $color-tertiary: hsl(180, 70%, 77%) !default;
 $color-background: hsla(0, 0%, 0%, 0.4) !default;
 $color-base: hsl(0, 0%, 100%) !default;
+$color-lighter-gray: hsl(0, 0%, 84%) !default;
+$color-light-gray: hsl(0, 0%, 96%) !default;
 $color-med-gray: hsl(0, 0%, 27%) !default;
-$color-base-gray: rgb(190, 190, 190) !default;
+$color-base-gray: hsl(0, 0%, 74%) !default;
 
 //typography
 $base-font-size: 16px !default;

@@ -1,4 +1,4 @@
-import { Base } from '../helper.js'
+import { Base } from './base.js'
 
 class CloseButton extends Base {
   constructor(element, {className}) {

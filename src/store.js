@@ -8,6 +8,16 @@ const data = {
     mobile: 'FIND A PRO',
     tabletUp: 'Find a Pool Pro'
   },
+  options: {
+    result: '7 dealers in 28226',
+    filter: 'Filter Results',
+    items: [
+      'Service',
+      'Installation',
+      'Residential',
+      'Commercial'
+    ]
+  },
   form: {
     icons: {
       notchecked: checkURL,
@@ -81,9 +91,11 @@ const commits = {
 const $commit = commits.$commit
 const PROBUTTON = data.findPro
 const FORM = data.form
+const OPTIONS = data.options
 export {
   PROBUTTON,
   FORM,
+  OPTIONS,
   $commit,
   DEALERS
 }

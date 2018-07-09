@@ -1,4 +1,4 @@
-import { Base } from '../helper.js'
+import { Base } from './base.js'
 import { $commit } from '../store.js'
 
 class InputField extends Base {

@@ -1,5 +1,5 @@
 import { FORM, $commit } from '../store.js'
-import { Base } from '../helper.js'
+import { Base } from './base.js'
 import closeModalBtn from './closeModal.js'
 import InputField from './inputField.js'
 import TextArea from './textArea.js'
@@ -15,7 +15,8 @@ const template = `
     <p style="padding-bottom:20px">${FORM.subtitle}</p>
   </div>
   <div class="modal__footer">
-    <button class="--pull-right">Send</button>
+    <hr class="--style">
+    <button class="btn--primary btn--send"><i class="ss-icon">mail</i> Send</button>
   </div>
 </div>
 `
