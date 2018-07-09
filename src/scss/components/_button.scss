@@ -20,3 +20,15 @@
   color: $color-secondary;
   border-color: $color-secondary
 }
+.btn--close {
+  line-height: 0;
+  @extend %button;
+  padding: 0;
+  float: right;
+  color: $color-base;
+  border: transparent;
+  font-size: 14px;
+  & :hover {
+    color: $color-secondary
+  }
+}

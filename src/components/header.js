@@ -1,8 +1,8 @@
 import logoURL from "../img/pool-pros-logo.png"
 import menuIconURL from "../img/menu-icon-mobile.png"
 import topBar from "./topBar"
-import data from "../store"
-const text = data.findPro
+import { PROBUTTON } from "../store"
+
 
 const header = document.createElement('header')
 header.className = 'navbar'
@@ -17,7 +17,7 @@ nav.innerHTML = `
   <div class="navbar__item"><a href="#">Supplies</a></div>
   <div class="navbar__item"><a href="#">Resources</a></div>
   <div class="navbar__item"><a href="#">Services</a></div>
-  <div class="navbar__btn"><button class="btn btn--primary" class="ss-location"><i class="ss-icon">location</i>${text.mobile}</button></div>
+  <div class="navbar__btn"><button class="btn btn--primary" class="ss-location"><i class="ss-icon">location</i>${PROBUTTON.mobile}</button></div>
 </nav>
 <nav class="navbar__menu">
   <img class="img-responsive" src=${menuIconURL} alt="menu" title="menu">

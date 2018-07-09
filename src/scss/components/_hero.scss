@@ -2,14 +2,16 @@
   line-height: 0;
   height: $hero-plus-navbar-height;
   // mock water img differs from hero img given
-  background-image: url('../img/hero-image-mobile.png');
-  background-size: cover;
+  // background-image: url('../img/hero-image-mobile.png');
+  background-image: url('../img/water-image.png');
   background-repeat: no-repeat;
   background-position: left;
+  background-size: cover;
   @include respond-to('small') {
-    // mock water img differs from hero img given 
-    background-image: url('../img/hero-image.png');
-    background-position: center;
+    // mock water img differs from hero img given
+    // background-image: url('../img/hero-image.png');
+    background-position: bottom;
+    background-size: contain;
   }
   @include respond-to('medium') {
     height: $hero-plus-navbar-md-height;

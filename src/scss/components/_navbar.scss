@@ -1,6 +1,6 @@
 .navbar {
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35);
-  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 3px 5px $color-background;
+  background-color: $color-base;
   position: fixed;
 }
 .navbar__items {
@@ -23,7 +23,6 @@
   }
 }
 .navbar__brand {
-
   width: $logo-width;
   //center vertically
   line-height: 0;

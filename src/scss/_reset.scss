@@ -15,6 +15,18 @@ ul,
 ol {
   @extend %zero;
 }
+input[type=text],
+textarea,
+input[type=password] {
+  box-sizing : border-box;
+}
+textarea {
+  resize: vertical;
+}
+input[type=radio] {
+  @extend %zero;
+  cursor: pointer;
+}
 .ss-icon {
   vertical-align: middle;
   font-size: 150%;

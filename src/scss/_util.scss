@@ -3,9 +3,14 @@
   height: auto;
   margin: auto;
 }
-
 .med-hidden {
   @include respond-to('medium') {
     display: none;
   }
+}
+.--hidden {
+  display: none;
+}
+.--pull-right {
+  float: right;
 }

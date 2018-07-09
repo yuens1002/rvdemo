@@ -2,12 +2,19 @@
 $color-primary: hsl(215, 89%, 28%) !default;
 $color-secondary: hsl(216, 74%, 50%) !default;
 $color-tertiary: hsl(180, 70%, 77%) !default;
+$color-background: hsla(0, 0%, 0%, 0.4) !default;
+$color-base: hsl(0, 0%, 100%) !default;
+$color-med-gray: hsl(0, 0%, 27%) !default;
+$color-base-gray: rgb(190, 190, 190) !default;
 
 //typography
 $base-font-size: 16px !default;
 $base-font-face: 'Open Sans' !default;
+$base-font-color: $color-med-gray;
 
 //link
+// no spec given for hover
+// choice made here is interpretive
 $link-color: $color-primary;
 $link-hover-color: lighten($color-primary, 15%);
 $link-hover-decoration: none;
@@ -51,3 +58,8 @@ $hero-md-height: 133px;
 $hero-plus-navbar-height:  $hero-height + $navbar-height;
 $hero-plus-navbar-md-height:
   $hero-md-height + $navbar-md-height + $top-bar-height;
+
+//modal
+$modal-from-top: 135px;
+$modal-md-from-top: 140px;
+$modal-background: $color-base;

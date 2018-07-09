@@ -1,0 +1,38 @@
+.form-control {
+  display: inline-block;
+  width: 100%;
+}
+.form-control__field {
+  width: 100%;
+  padding: .75rem;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  margin: 6px 0 18px 0;
+  background-color: transparent;
+  font-size: 15px;
+  //not sure why textarea isn't multi-line
+  & textarea {
+
+    width: 80%;
+  }
+}
+
+.form-control__label {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+}
+.form-field-indicator {
+  float: right;
+  width: 20px;
+}
+.form-field-optional {
+  float: right;
+  font-size: 14px;
+  font-style: italic;
+  color: $color-base-gray;
+}
+.form-control__label--radio {
+  display: inline-block;
+  padding: .5rem .75rem .75rem .25rem;
+}

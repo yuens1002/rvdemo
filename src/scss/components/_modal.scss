@@ -1,0 +1,36 @@
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: $modal-from-top; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: $color-background;
+  @include respond-to('medium') {
+    padding-top: $modal-md-from-top;
+  }
+}
+.modal__content {
+  margin: auto;
+  padding-bottom: 20px;
+  background-color: $modal-background;
+  box-shadow: 3px 3px 8px $color-background;
+  width: 90%;
+  @include respond-to('medium') {
+    width: 50%;
+  }
+}
+.modal__header {
+  color: $color-base;
+  background-color: $color-primary;
+  padding: 25px 20px;
+}
+.modal__body {
+  padding: 10px 20px;
+}
+.modal__close {
+  float: right;
+}
