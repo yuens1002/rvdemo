@@ -1,0 +1,50 @@
+.card {
+  height: 100%;
+  margin-top: 1rem;
+  border: 1px solid $color-light-gray;
+  box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, .3);
+  border-radius: 1rem;
+  text-align: center;
+  @include element('header') {
+    padding: 0;
+  }
+  @include element('body') {
+    @include element('title') {
+      padding: 0 1rem;
+      border-bottom: 2px solid $color-light-gray;
+      margin-bottom: 1rem;
+    }
+    @include element('phone') {
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 22px;
+      line-height: 0;
+      font-weight: 800;
+    }
+    @include element('subtitle') {
+      font-style: italic;
+      font-size: 12px;
+      padding-bottom: 1rem;
+    }
+    @include element('cta') {
+      padding-bottom: 2rem;
+    }
+  }
+  @include element('footer') {
+    display: flex;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    @include element('items') {
+      font-size: 12px;
+      @include element('item') {
+        display: inline-block;
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+.cardIcon {
+  color: $color-base-gray;
+  font-size: 12px;
+  padding-right: .5rem;
+}

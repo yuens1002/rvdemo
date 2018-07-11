@@ -11,5 +11,6 @@ html {
 
 /* Multiple properties with same values */
 h1,h2,h3,h4,h5 {
+  font-weight: 300;
 	@include interpolate((padding-top, padding-bottom), 20rem, 70rem, 0, 0.5rem);
 }

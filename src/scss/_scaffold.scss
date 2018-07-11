@@ -1,3 +1,10 @@
+body {
+  background-color: $color-primary;
+}
+main,  {
+  background-color: $color-base;
+  padding-bottom: 6rem;
+}
 a {
   font-weight: 600;
   font-size: 15px;

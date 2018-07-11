@@ -15,7 +15,7 @@ const template = `
     <p style="padding-bottom:20px">${FORM.subtitle}</p>
   </div>
   <div class="modal__footer">
-    <hr class="--style">
+    <hr class="hr--style">
     <button class="btn--primary btn--send"><i class="ss-icon">mail</i> Send</button>
   </div>
 </div>
@@ -29,7 +29,7 @@ const modalHeader = modal.element.querySelector('.modal__header')
 modalHeader.insertBefore(closeModalBtn, modalHeader.firstChild)
 
 //construct input fields
-let input
+
 FORM.inputs.forEach((field)=> {
   const modalbody = modal.element.querySelector('.modal__body')
   let props = {
@@ -39,7 +39,7 @@ FORM.inputs.forEach((field)=> {
     title: field.title,
     isRequired: field.required
   }
-  input = new InputField(props)
+  let input = new InputField(props)
   modalbody.appendChild(input.element)
 })
 

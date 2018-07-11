@@ -1,0 +1,12 @@
+
+.list {
+  margin: 0;
+  padding: 0;
+  @include modifier('unstyled') {
+    list-style-type: none;
+  }
+}
+.list--inline > .list__items {
+  display: inline-block;
+  padding: 0 .5rem;
+}

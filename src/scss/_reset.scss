@@ -3,20 +3,25 @@
   padding: 0;
   box-sizing: content-box;
 }
-html,
-body,
-header,
-section,
-footer {
-  @extend %zero;
-  width: 100%;
+
+html {
+  height: 100%;
 }
+
+section,
+html,
+header,
+body,
+footer,
 ul,
 ol {
+  width: 100%;
   @extend %zero;
 }
+
 input[type=text],
 textarea,
+article,
 input[type=password] {
   box-sizing : border-box;
 }
@@ -32,7 +37,7 @@ input[type=radio] {
   font-size: 150%;
   padding: 0 0.2rem 0 0;
 }
-hr.--style {
+hr.hr--style {
   border-top: 2px solid rgb(236, 236, 236);
   border-bottom: 1px solid rgb(236, 236, 236);
 }

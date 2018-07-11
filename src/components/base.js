@@ -1,3 +1,5 @@
+import { PROBUTTON } from '../store'
+
 class Base {
   constructor(element, {template, className, id} = {}) {
     // this.template = template
@@ -18,6 +20,19 @@ class Base {
   }
   createElm(elm) {
     return document.createElement(elm)
+  }
+  static init(components, app) {
+    components.forEach(component => {
+      app.append(component)
+    })
+    window.onresize = ()=> {
+      const btnEl = document.getElementById('proBtn')
+      if (window.innerWidth > 768) {
+        btnEl.innerText = PROBUTTON.tabletUp
+      } else {
+        btnEl.innerText = PROBUTTON.mobile
+      }
+    }
   }
 }
 

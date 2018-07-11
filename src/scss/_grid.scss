@@ -1,8 +1,15 @@
 .container {
   @include container-fixed;
-
   @include respond-to('large') {
     //mx.w prevents hoz. scrollbar @bkpt
     max-width: $lg;
+  }
+}
+
+.flexGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
+  @include element('cell') {
+    padding: 10px;
   }
 }

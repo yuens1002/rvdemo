@@ -6,19 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RV Code Demo</title>
     <link href="src/webfonts/ss-pika.css" rel="stylesheet">
+      <style>
+        .flex-grid {
+          display: flex;
+        }
+
+        .flex-grid-column.col {
+          background-color: red;
+        }
+
+        .flex-grid-column.col * {
+          display: flex;
+          width: 30%;
+          background-color: green;
+        }
+
+        @media (max-width: 400px) {
+          .flex-grid {
+            display: block;
+          }
+        }
+
+        .col {
+          flex: 1;
+          text-align: center;
+          margin: 8px;
+          padding: 8px;
+          background-color: blue;
+          border: 1px solid black;
+        }
+      </style>
   </head>
   <body>
       <div id="app">
-        <nav style="position:fixed;background-color:red;height:50px;width:100%">
-          ajfasfd hasdfewf bef
-        </nav>
-        <section>
-          a;sfa;sdfj<br>
-          a;sfa;sdfj<br>
-          a;sfa;sdfj<br>
-          a;sfa;sdfj<br>
+        <div class="flex-grid">
+          <div class="col">
+            <div>Aqua Experts</div>
+            <button>asdfasdfasdf</button>
+            <div>asfasdf</div>
+          </div>
+          <div class="col">asdfasdf</div>
+          <div class="flex-grid-column col">
+            <div>asdfasdfasdf</div>
+            <div>asdasdfasdf</div>
+          </div>
 
-        </section>
+          <!-- <div class="col">
+            <div class="flex-grid-half"></div>asfasf</div>
+            <div class="flex-grid-half"></div>asdfasdf</div>
+            <div class="flex-grid-half"></div>asdfasdf</div>
+            <div class="flex-grid-half"></div>asfasdf</div>
+          </div> -->
+        </div>
       </div>
   </body>
 </html>

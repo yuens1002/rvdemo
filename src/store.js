@@ -8,6 +8,23 @@ const data = {
     mobile: 'FIND A PRO',
     tabletUp: 'Find a Pool Pro'
   },
+  bez: {
+    cta: 'Contact this Pro',
+    hours: {
+      title: 'Business Hours',
+      weekdays: 'Weekdays',
+      saturdays: 'Saturdays',
+      sundays: 'Sundays',
+      noSunday: ' - CLOSED'
+    },
+    subtitle: 'Can’t talk now? Click below to send an email.'
+  },
+  footer: {
+    title: 'CONNECT WITH US',
+    copyright: '&copy; 2017 Pool Pros',
+    privacy: 'Privacy Policy',
+    terms: 'Terms and Conditions'
+  },
   options: {
     result: '7 dealers in 28226',
     filter: 'Filter Results',
@@ -92,10 +109,14 @@ const $commit = commits.$commit
 const PROBUTTON = data.findPro
 const FORM = data.form
 const OPTIONS = data.options
+const FOOTER = data.footer
+const PROVIDER = data.bez
 export {
   PROBUTTON,
   FORM,
   OPTIONS,
   $commit,
-  DEALERS
+  DEALERS,
+  FOOTER,
+  PROVIDER
 }

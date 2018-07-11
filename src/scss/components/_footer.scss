@@ -1,0 +1,38 @@
+.footer {
+  padding-top: 2rem;
+  width: 100%;
+  background-color: $color-primary;
+  bottom: 0;
+  left: 0;
+  @include element('branding') {
+    text-align: center;
+    @include element('logo') {
+      width: 130px;
+      margin: auto;
+      padding-bottom: .5rem;
+    }
+    @include element('social') {
+      color: $color-base;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-block;
+      @include modifier('text') {
+        padding-right: 3rem;
+      }
+    }
+  }
+  @include element('disclaimer') {
+    margin-top: 1rem;
+    font-size: 10px;
+    padding: .25rem 0;
+    background-color: $color-secondary;
+  }
+}
+.footerIcon {
+  display: inline-block;
+  width: 15px;
+  padding-right: 1rem;
+}
+.footer__branding__social :last-child {
+  padding-right: 0;
+}
