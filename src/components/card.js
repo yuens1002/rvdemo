@@ -51,6 +51,7 @@ class Card extends Base {
   handler () {
     this.element.querySelector('.btn--primary').onclick = () => {
       document.getElementById('form-modal').style = 'display: block'
+      document.body.classList.toggle('overFlow-hidden')
     }
   }
   get sundayHours() {

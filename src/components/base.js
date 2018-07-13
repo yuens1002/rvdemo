@@ -21,6 +21,9 @@ class Base {
   createElm(elm) {
     return document.createElement(elm)
   }
+  toggleOverFlowClass() {
+    document.body.classList.toggle('overFlow-hidden')
+  }
   static init(components, app) {
     components.forEach(component => {
       app.append(component)

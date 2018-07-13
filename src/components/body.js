@@ -29,7 +29,6 @@ DEALERS.dealers.forEach((dealer)=> {
   const cardShell = document.createElement('div')
   cardShell.className = 'flexGrid__cell'
   cardShell.appendChild(card.element)
-  console.log(cardShell)
   bodyElm__flexGrid.appendChild(cardShell)
 })
 

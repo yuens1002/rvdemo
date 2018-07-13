@@ -15,12 +15,15 @@ class CloseButton extends Base {
     this.element.addEventListener('click', (target)=> {
       target.preventDefault()
       this.modalFromDom.style.display = "none"
+      super.toggleOverFlowClass()
+
     })
   }
   windowHandler () {
     window.onclick = (e) => {
       if (e.target === this.modalFromDom) {
         this.modalFromDom.style.display = "none"
+        super.toggleOverFlowClass()
       }
     }
   }

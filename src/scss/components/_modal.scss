@@ -2,19 +2,18 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 100; /* Sit on top */
-  padding-top: $modal-from-top; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  margin-bottom: 3rem;
+  overflow: auto;/* Enable scroll if needed */
   background-color: $color-background;
-  @include respond-to('medium') {
-    padding-top: $modal-md-from-top;
-  }
 }
 .modal__content {
-  margin: auto;
+  // margin: 5rem, .5rem;
+  // height: 400px;
+  margin: 0 auto;
   padding-bottom: 20px;
   background-color: $modal-background;
   box-shadow: 3px 3px 8px $color-background;
@@ -36,5 +35,21 @@
 }
 .modal__footer {
   @include clearfix;
-  padding: 0 20px 25px 20px;
+  text-align: right;
+  padding: 0 20px 20px 0;
+}
+.modal {
+  @include element('header-extra') {
+    //add padding to the top
+    margin-top: $modal-from-top;
+    background-color: transparent;
+    @include respond-to('medium') {
+      margin-top: $modal-md-from-top;
+    }
+  }
+  @include element('footer-extra') {
+    //add padding to the bottom
+    margin-bottom: 20px;
+    background-color: transparent;
+  }
 }

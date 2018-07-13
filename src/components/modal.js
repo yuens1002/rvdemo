@@ -6,6 +6,7 @@ import TextArea from './textArea.js'
 import Radio from './radioButton.js'
 
 const template = `
+<div class="modal__header-extra"></div>
 <div class="modal__content">
   <div class="modal__header">
     <span class="med-hidden">${FORM.type}</span>
@@ -19,6 +20,7 @@ const template = `
     <button class="btn--primary btn--send"><i class="ss-icon">mail</i> Send</button>
   </div>
 </div>
+<div class="modal__footer-extra"></div>
 `
 
 const modal = new Base('div', {template, className: 'modal', id: 'form-modal'})
