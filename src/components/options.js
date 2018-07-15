@@ -3,7 +3,7 @@ import { OPTIONS } from '../store.js'
 
 const template = `
     <div class="options container">
-      <div class="options__header med-hidden">
+      <div class="options__header --med-hidden">
         <div class="options-results">${OPTIONS.result}</div>
         <div class="options-filter"></div>
       </div>
@@ -18,6 +18,6 @@ const template = `
   </div>
 `
 
-const options = new Base('section', {template, className: 'optionsContainer'})
-const filter = options.element
-export default filter
+const options = new Base('section', {template, className: 'optionsContainer flex--column__notMain'})
+
+export default options.element

@@ -13,3 +13,48 @@
     padding: 10px;
   }
 }
+
+.flex {
+  display: flex;
+  @include modifier('lg-3') {
+    flex-direction: column;
+    @include respond-to('small') {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    @include element('cell') {
+      outline: 1px solid;
+      margin-bottom: $grid-gutter-width/2;
+      flex-basis: 100%;
+      @include respond-to('small') {
+        flex-basis: 50%;
+        margin-left: $grid-gutter-width/2;
+      }
+      @include respond-to('medium') {
+        flex-basis: 33.33%;
+      }
+      @include modifier('first') {
+        margin-top: $grid-gutter-width/2;
+        margin-left: 0;
+        @include respond-to('small') {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  @include modifier('column') {
+    height: 100vh;
+    flex-direction: column;
+    @include element('main') {
+      /**
+        Set `flex-shrink` to `0` to prevent some browsers from
+        letting these items shrink to smaller than their content's
+        default minimum size. See http://bit.ly/1Mn35US for details.
+      **/
+      flex: 1 0 auto;
+    }
+    &__notMain {
+      flex: none;
+    }
+  }
+}

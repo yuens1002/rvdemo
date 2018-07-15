@@ -1,5 +1,5 @@
 const topBar = document.createElement('section')
-topBar.className = 'top-bar'
+topBar.className = 'top-bar flex--column__notMain'
 
 topBar.innerHTML = `
 <section class="container top-bar__items">

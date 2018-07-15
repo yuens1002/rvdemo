@@ -1,14 +1,14 @@
-import logoURL from "../img/pool-pros-logo.png"
-import menuIconURL from "../img/menu-icon-mobile.png"
-import topBar from "./topBar"
-import { PROBUTTON } from "../store"
+import logoURL from '../img/pool-pros-logo.png'
+import menuIconURL from '../img/menu-icon-mobile.png'
+import topBar from './topBar'
+import { PROBUTTON } from '../store'
 
 function getProBtnTxt () {
   return window.innerWidth > 768 ? PROBUTTON.tabletUp : PROBUTTON.mobile
 }
 
-const header = document.createElement('header')
-header.className = 'navbar'
+const header = document.createElement('section')
+header.className = 'navbar flex--column__notMain'
 header.appendChild(topBar)
 
 const nav = document.createElement('nav')

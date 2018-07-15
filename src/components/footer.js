@@ -30,6 +30,6 @@ const template = `
   </div>
 `
 
-const footer= new Base('footer', {template, className: 'footer'})
+const footer= new Base('div', {template, className: 'footer flex--column__notMain'})
 const footerElm = footer.element
 export default footerElm

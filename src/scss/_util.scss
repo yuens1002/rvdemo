@@ -3,7 +3,7 @@
   height: auto;
   margin: auto;
 }
-.med-hidden {
+.--med-hidden {
   @include respond-to('medium') {
     display: none;
   }
@@ -17,6 +17,6 @@
 .--textWhite {
   color: rgb(255, 255, 255);
 }
-.overFlow-hidden {
+.--overFlow-hidden {
   overflow: hidden
 }
