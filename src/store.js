@@ -4,6 +4,12 @@ const DEALERS = require('./dealers.json')
 
 //in-app data in one place
 const data = {
+  breakpoints: {
+    xs: 480,
+    sm: 768,
+    med: 992,
+    lg: 1270
+  },
   findPro: {
     mobile: 'FIND A PRO',
     tabletUp: 'Find a Pool Pro'
@@ -100,6 +106,9 @@ const commits = {
   setTextAreaVal(payload) {
     data.form.textarea[0].value = payload
   },
+  // currentBreakPoint(payload) {
+  //   data.breakpoints.current = payload
+  // }
   $commit(name, payload) {
     commits[name](payload)
   }
@@ -111,6 +120,7 @@ const FORM = data.form
 const OPTIONS = data.options
 const FOOTER = data.footer
 const PROVIDER = data.bez
+const BREAKPOINTS = data.breakpoints
 export {
   PROBUTTON,
   FORM,
@@ -118,5 +128,6 @@ export {
   $commit,
   DEALERS,
   FOOTER,
-  PROVIDER
+  PROVIDER,
+  BREAKPOINTS
 }

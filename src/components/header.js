@@ -7,7 +7,7 @@ function getProBtnTxt () {
   return window.innerWidth > 768 ? PROBUTTON.tabletUp : PROBUTTON.mobile
 }
 
-const header = document.createElement('section')
+const header = document.createElement('header')
 header.className = 'navbar flex--column__notMain'
 header.appendChild(topBar)
 
