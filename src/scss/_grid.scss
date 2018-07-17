@@ -6,39 +6,25 @@
   }
 }
 
-// .flexGrid {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fill, minmax(385px, 1fr));
-//   @include element('cell') {
-//     padding: 10px;
-//   }
-// }
-
 .flex {
   display: flex;
   @include modifier('lg-3') {
-    flex-direction: column;
+    width: 100%;
+    display: inline-block;
     @include respond-to('small') {
-      flex-flow: row nowrap;
-      justify-content: flex-start;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
     }
     @include element('cell') {
-      border: 1px solid;
-      margin-bottom: $grid-gutter-width/2;
-      flex-basis: 100%;
+      //nullify weird extra padding 
+      padding-bottom: 0;
       @include respond-to('small') {
-        flex-basis: 50%;
-        margin-left: $grid-gutter-width/2;
+        padding-bottom: $grid-gutter-width/2;
+        flex-basis: 49.1%;
       }
       @include respond-to('medium') {
-        flex-basis: 33.33%;
-      }
-      @include modifier('first') {
-        // padding-top: $grid-gutter-width/2;
-        margin-left: 0;
-        @include respond-to('small') {
-          // padding-top: 0;
-        }
+        flex-basis: 32.5%;
       }
     }
   }
