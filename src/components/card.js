@@ -1,6 +1,9 @@
 import { Base } from './base.js'
 import { DEALERS } from '../store.js'
 
+
+
+
 class Card extends Base {
   constructor(props) {
     super('article', {className: 'card'})
@@ -12,13 +15,13 @@ class Card extends Base {
     this.hours = props.hours
     this.hoursText = props.hoursText
     this.certs = props.certs
-    this.template = `
+    this.template =
+      `<div class="card__header">
+        <div><h2>${this.title}</h2></div>
+      </div>
       <div class="card__body">
-        <div class="card__body__title">
-          <h2>${this.title}</h2>
-        </div>
         <div class="card__body__phone">
-           <img src=${this.phoneIcon} width="25px" style="padding-right: 0.5rem">
+           <img src=${this.phoneIcon} aria-hidden="true" title="phone" alt="phone">
            <span>${this.phone}</span>
         </div>
         <div class="card__body__subtitle">${this.subtitle}</div>
@@ -33,18 +36,15 @@ class Card extends Base {
               <li>${this.hoursText.sundays} ${this.sundayHours}</li>
             </ul>
         </div>
-        <div class="card__footer">
-          <div class="card__footer__items">
-            <div class="card__footer__items__item">${this.getCert('Installation Pro')}</div>
-            <div class="card__footer__items__item">${this.getCert('Residential Pro')}</div>
-          </div>
-          <div class="card__footer__items">
-            <div class="card__footer__items__item">${this.getCert('Service Pro')}</div>
-            <div class="card__footer__items__item">${this.getCert('Commercial Pro')}</div>
-          </div>
-        </div>
       </div>
-    `
+      <div class="card__footer">
+        <div class="card__footer__items">
+          <div class="card__footer__item">${this.getCert('Installation Pro')}</div>
+          <div class="card__footer__item">${this.getCert('Residential Pro')}</div>
+          <div class="card__footer__item">${this.getCert('Service Pro')}</div>
+          <div class="card__footer__item">${this.getCert('Commercial Pro')}</div>
+        </div>
+      </table>`
     this.element.innerHTML = this.template
     this.handler()
   }
