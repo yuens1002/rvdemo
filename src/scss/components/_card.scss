@@ -1,7 +1,7 @@
 .card {
   display: flex;
   flex-flow: column wrap;
-  height: 460px;
+  height: 480px;
   border: 1px solid $color-light-gray;
   box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, .3);
   border-radius: 1rem;
@@ -31,7 +31,6 @@
       grid-template-rows: 18px 18px;
       grid-column-gap: 4rem;
       justify-items: left;
-
     }
   }
   @include element('body') {
