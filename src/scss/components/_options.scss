@@ -1,39 +1,86 @@
 .options {
-  box-sizing: content-box;
-  background-color: $color-light-gray;
-  @include respond-to('medium') {
-    background-color: transparent;
-  }
-}
-.optionsContainer {
   background-color: $color-base;
-}
-.options__header {
-  padding: .5rem 0;
-}
-.options-results {
-  color: $color-secondary;
-  font-size: 16px;
-}
-.options-filter {
-
-}
-.options__body {
-  background-color: $color-base;
-  border: 1px solid $color-lighter-gray;
-  padding: 1rem;
-  margin-bottom: 25px;
-  @include respond-to('medium') {
-    border: none;
+  @include element('container') {
     background-color: $color-light-gray;
-    border-radius: .5rem;
-    justify-content: space-between;
+    padding: $grid-gutter-width/2;
+    border-bottom: 1px solid $color-lighter-gray;
+    @include respond-to('medium') {
+      border-bottom-width: 0;
+      background-color: $color-base;
+    }
   }
-}
-.options__list {
-  display: block;
-  @include respond-to('medium') {
+  @include element('title') {
+    display: none;
+    @include respond-to('medium') {
+      display: block;
+    }
+    & > div {
+      display: inline-block;
+    }
+    font-weight: bold;
+    font-size: 16px;
+    @include element('left') {
+      color: $color-secondary;
+      padding-right: 2rem;
+      margin-right: 2rem;
+      border-right: 1px solid $color-lighter-gray;
+    }
+  }
+  @include element('header') {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
     display: flex;
     justify-content: space-between;
+    @include respond-to('medium') {
+      display: none;
+    }
+    @include element('title') {
+      padding: 1rem 0;
+      color: $color-secondary;
+    }
+    @include element('body') {
+      display: flex;
+      align-items: center;
+      border: 1px solid $color-lighter-gray;
+      border-bottom-width: 0;
+      @include element('title') {
+        background-color: $color-base;
+        padding: 1rem;
+        border-right: 1px solid $color-lighter-gray;
+      }
+      @include element('dropdown') {
+        padding: 1rem 1.2rem;
+      }
+    }
+  }
+  @include element('body') {
+    background-color: $color-base;
+    border: 1px solid $color-lighter-gray;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    @include respond-to('medium') {
+      padding: 2rem 0 0 0;
+      border: none;
+      background-color: $color-light-gray;
+      border-radius: .5rem;
+    }
+    @include element('items') {
+      display: block;
+      & > * {
+        @include respond-to('medium') {
+          padding-right: 2rem;
+        }
+      }
+      & :last-child {
+        @include respond-to('medium') {
+          padding-right: 0;
+        }
+      }
+      @include respond-to('medium') {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 }

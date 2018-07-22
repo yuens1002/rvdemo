@@ -3,6 +3,11 @@
   height: auto;
   margin: auto;
 }
+.--sm-hidden {
+  @include respond-to('small') {
+    display: none;
+  }
+}
 .--med-hidden {
   @include respond-to('medium') {
     display: none;
@@ -19,4 +24,18 @@
 }
 .--overFlow-hidden {
   overflow: hidden
+}
+.--arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid $color-med-gray;
+}
+.--arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $color-med-gray;
 }

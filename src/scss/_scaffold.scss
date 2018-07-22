@@ -1,9 +1,12 @@
 body {
   background-color: $color-primary;
 }
-main,  {
+main  {
   background-color: $color-base;
   padding-bottom: 6rem;
+}
+img {
+  line-height: 0;
 }
 a {
   font-weight: 600;
