@@ -26,7 +26,7 @@ const template =
 const filter = new Base('section', {template, className: 'options flex--column__notMain'})
 OPTIONS.items.forEach(item => {
   let checkbox = new Checkbox({
-    checked: item !== 'Commercial' ? true : false,
+    checked: false,
     title: item
   })
   filter.element.querySelector('.options__body__items').appendChild(checkbox.element)

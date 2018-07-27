@@ -1,17 +1,19 @@
 import { PROBUTTON, BREAKPOINTS, $commit } from '../store'
 
 class Base {
-  constructor(element, {template, className, id} = {}) {
+  constructor(element, {template, className, id, forAttribute} = {}) {
     this.template = template
     this.className = className
     this.id = id
+    this.forAttribute = forAttribute
     this.element = this.createElm(element)
     this.element.innerHTML = template || ''
     this.setIdAttribute()
     this.setClassName()
   }
   setIdAttribute () {
-    if (this.id) this.element.setAttribute('id', this.id)
+    this.id && this.element.setAttribute('id', this.id)
+    this.forAttribute && this.element.setAttribute('for', this.forAttribute)
   }
   setClassName () {
     if (this.className) {

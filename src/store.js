@@ -4,6 +4,7 @@ const DEALERS = require('./dealers.json')
 
 //in-app data in one place
 const data = {
+  // *** to revert to js grid ***
   breakpoints: {
     xs: 480,
     sm: 768,
@@ -39,7 +40,8 @@ const data = {
       'Installation',
       'Residential',
       'Commercial'
-    ]
+    ],
+    selected: []
   },
   form: {
     icons: {
@@ -106,6 +108,12 @@ const commits = {
   setTextAreaVal(payload) {
     data.form.textarea[0].value = payload
   },
+  setSelectedOption(payload) {
+    payload.selected ?
+      data.options.selected.push(payload.value) :
+      (data.options.selected = data.options.selected.filter(e => e !== payload.value))
+  },
+  // *** to revert to js grid ***
   // currentBreakPoint(payload) {
   //   data.breakpoints.current = payload
   // }
