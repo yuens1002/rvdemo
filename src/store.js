@@ -32,16 +32,18 @@ const data = {
     privacy: 'Privacy Policy',
     terms: 'Terms and Conditions'
   },
-  options: {
+  filter: {
     result: '7 dealers in 28226',
     filter: 'Filter Results',
     items: [
-      'Service',
-      'Installation',
-      'Residential',
-      'Commercial'
+      'Service Pro',
+      'Installation Pro',
+      'Residential Pro',
+      'Commercial Pro'
     ],
-    selected: []
+    selected: {
+      filters: []
+    }
   },
   form: {
     icons: {
@@ -101,17 +103,44 @@ const data = {
 
 const commits = {
   setInputVal(payload) {
-    console.log(payload)
     let pos = data.form.inputs.map(field => field.id).indexOf(payload.id)
     data.form.inputs[pos].value = payload.value
   },
   setTextAreaVal(payload) {
     data.form.textarea[0].value = payload
   },
-  setSelectedOption(payload) {
+  // filterCard() {
+  //   card
+  // },
+  setSelectedFilter(payload, callback) {
+    //card has service keyword
+
+
+    let _proxy = new Proxy(data.filter.selected, {
+      // set (target, prop, val) {
+      //   console.log('updated')
+      //   return Reflect.set(target, prop, val)
+      // },
+      set (target, prop, val) {
+        Reflect.set(target, prop, val)
+        let hasCertification = DEALERS.dealers.map(dealer => {
+          console.log(dealer.data.certifications)
+          return dealer.data.certifications.some(cert => {
+            return data.filter.selected.filters.includes(cert)
+          })
+        })
+        let cards = document.querySelectorAll('.flex--lg-3__cell')
+        for (let i = 0; i < cards.length; i++) {
+          !hasCertification[i] && (cards[i].style = 'display:none')
+          hasCertification[i] && (cards[i].style = 'display: block')
+        }
+        return true;
+      }
+    })
     payload.selected ?
-      data.options.selected.push(payload.value) :
-      (data.options.selected = data.options.selected.filter(e => e !== payload.value))
+      _proxy.filters.push(payload.value) :
+      _proxy.filters = _proxy.filters.filter(e => e !== payload.value)
+    // console.log(data.filter.selected.filters)
   },
   // *** to revert to js grid ***
   // currentBreakPoint(payload) {
@@ -122,17 +151,24 @@ const commits = {
   }
 }
 
+const dispatch = {
+
+  $dispatch(name, payload) {
+    dispatch[name](payload)
+  }
+}
+
 const $commit = commits.$commit
 const PROBUTTON = data.findPro
 const FORM = data.form
-const OPTIONS = data.options
+const FILTER = data.filter
 const FOOTER = data.footer
 const PROVIDER = data.bez
 const BREAKPOINTS = data.breakpoints
 export {
   PROBUTTON,
   FORM,
-  OPTIONS,
+  FILTER,
   $commit,
   DEALERS,
   FOOTER,
